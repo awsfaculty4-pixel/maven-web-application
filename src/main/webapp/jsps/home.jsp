@@ -9,7 +9,7 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f6; /* Light Grey Background */
+            background-color: #f4f7f6;
             color: #333;
             margin: 0;
             padding: 20px;
@@ -19,76 +19,116 @@
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            max-width: 900px;
+            max-width: 1000px;
             margin: auto;
         }
-        h1 {
-            color: #2c3e50; /* Dark Blue/Grey */
-            text-transform: uppercase;
-        }
         .header-section {
-            background-color: #004a99; /* Professional Blue */
+            background-color: #004a99;
             color: white;
-            padding: 10px;
-            border-radius: 5px;
+            padding: 20px;
+            border-radius: 8px;
             margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-        .header-section h1 { color: white; margin: 5px; }
+        .header-text {
+            text-align: center;
+            flex-grow: 1;
+        }
+        .header-text h1 { 
+            color: white; 
+            margin: 0; 
+            text-transform: uppercase;
+            font-size: 24px;
+        }
+        .header-text p { margin: 5px 0 0 0; opacity: 0.9; }
+        .logo-img {
+            width: 80px;
+            height: auto;
+            border-radius: 4px;
+            background: white;
+            padding: 5px;
+        }
         .ip-box {
             background-color: #e8f0fe;
             border-left: 5px solid #004a99;
             padding: 15px;
             margin: 15px 0;
+            border-radius: 0 4px 4px 0;
         }
         .footer {
             margin-top: 30px;
             padding: 20px;
             background-color: #f9f9f9;
             border-top: 1px solid #ddd;
+            border-radius: 0 0 8px 8px;
         }
-        hr { border: 0; border-top: 1px solid #eee; }
         a { color: #004a99; text-decoration: none; font-weight: bold; }
         a:hover { text-decoration: underline; }
+        .service-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #004a99;
+            color: white !important;
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="header-section" align="center">
-        <h1>DevOps on AWS</h1>
-        <p>Jenkins Web Application Scenarios</p>
+    <!-- Header with Left and Right Images -->
+    <div class="header-section">
+        <img src="images/mithunlogo.jpg" alt="Logo Left" class="logo-img">
+        
+        <div class="header-text">
+            <h1>DevOps on AWS</h1>
+            <p>Jenkins Web Application Scenarios</p>
+        </div>
+
+        <img src="images/mithunlogo.jpg" alt="Logo Right" class="logo-img">
     </div>
 
+    <!-- Server Details -->
     <div class="ip-box">
-        <h3>Server Side Details</h3>
+        <h3><i style="color: #004a99;">&#9094;</i> Server Side Details</h3>
         <% 
-            InetAddress inetAddress = InetAddress.getLocalHost();
-            String ip = inetAddress.getHostAddress();
-            out.println("<strong>Host Name:</strong> " + inetAddress.getHostName() + "<br>"); 
-            out.println("<strong>IP Address:</strong> " + ip);
+            try {
+                InetAddress inetAddress = InetAddress.getLocalHost();
+                out.println("<strong>Host Name:</strong> " + inetAddress.getHostName() + "<br>"); 
+                out.println("<strong>IP Address:</strong> " + inetAddress.getHostAddress());
+            } catch(Exception e) {
+                out.println("Error fetching server details.");
+            }
         %>
     </div>
 
+    <!-- Client Details -->
     <div class="ip-box">
-        <h3>Client Side Details</h3>
+        <h3><i style="color: #004a99;">&#128187;</i> Client Side Details</h3>
         <% 
             out.print("<strong>Your IP:</strong> " + request.getRemoteAddr() + "<br>");
             out.print("<strong>Your Host:</strong> " + request.getRemoteHost());
         %>
     </div>
 
-    <p><strong>Service:</strong> <a href="services/employee/getEmployeeDetails">Get Employee Details</a></p>
+    <div style="margin: 20px 0; text-align: center;">
+        <p><strong>Action:</strong> <a href="services/employee/getEmployeeDetails" class="service-link">Get Employee Details</a></p>
+    </div>
 
+    <!-- Footer -->
     <div class="footer">
-        <div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
-            <img src="images/mithunlogo.jpg" alt="Logo" width="100">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 30px;">
+            <img src="images/mithunlogo.jpg" alt="Footer Logo" width="80">
             <div style="text-align: left;">
-                <strong>Devops_guruji</strong><br>
+                <strong style="font-size: 18px; color: #2c3e50;">Devops_guruji</strong><br>
                 Pune, Above ICICI Bank, Bangalore<br>
-                Ph: +91-9309430036 | <a href="mailto:rahultanaji24@gmail.com">rahultanaji24@gmail.co</a>
+                Ph: +91-9309430036 | <a href="mailto:rahultanaji24@gmail.com">rahultanaji24@gmail.com</a>
             </div>
         </div>
-        <hr>
+        <hr style="border: 0; border-top: 1px solid #ddd; margin: 15px 0;">
         <p align="center"><small>&copy; 2026 S2 Software - Consultant, Training, Development Center.</small></p>
     </div>
 </div>
