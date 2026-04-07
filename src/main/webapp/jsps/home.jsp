@@ -179,7 +179,7 @@
     <!-- Footer -->
     <div class="footer">
         <div style="display: flex; align-items: center; justify-content: center; gap: 30px;">
-            <img src="images/mithunlogo.jpg" alt="Footer Logo" width="100" style="background:white; border-radius:50%; padding:5px;">
+            <img src="images/devop.jpeg" alt="Footer Logo" width="100" style="background:white; border-radius:50%; padding:5px;">
             <div style="text-align: left;">
                 <strong style="font-size: 20px;">Rahul Shendage | Devops_guru__ji</strong><br>
                 Pune | Bangalore | Online Classes<br>
