@@ -19,13 +19,13 @@
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            max-width: 1000px;
+            max-width: 1100px; /* Increased width to accommodate larger images */
             margin: auto;
         }
         .header-section {
             background-color: #004a99;
             color: white;
-            padding: 20px;
+            padding: 25px; /* Added padding */
             border-radius: 8px;
             margin-bottom: 20px;
             display: flex;
@@ -35,21 +35,29 @@
         .header-text {
             text-align: center;
             flex-grow: 1;
+            padding: 0 20px;
         }
         .header-text h1 { 
             color: white; 
             margin: 0; 
             text-transform: uppercase;
-            font-size: 24px;
+            font-size: 28px; /* Slightly larger text */
         }
-        .header-text p { margin: 5px 0 0 0; opacity: 0.9; }
+        .header-text p { margin: 10px 0 0 0; opacity: 0.9; font-size: 18px; }
+        
+        /* Updated image size here */
         .logo-img {
-            width: 80px;
+            width: 150px; /* Increased from 80px to 150px */
             height: auto;
-            border-radius: 4px;
+            border-radius: 8px;
             background: white;
-            padding: 5px;
+            padding: 8px;
+            transition: transform 0.3s ease; /* Smooth hover effect */
         }
+        .logo-img:hover {
+            transform: scale(1.05); /* Slight zoom on hover */
+        }
+
         .ip-box {
             background-color: #e8f0fe;
             border-left: 5px solid #004a99;
@@ -69,17 +77,18 @@
         .service-link {
             display: inline-block;
             margin-top: 10px;
-            padding: 10px 15px;
+            padding: 12px 20px;
             background-color: #004a99;
             color: white !important;
             border-radius: 4px;
+            font-size: 16px;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <!-- Header with Left and Right Images -->
+    <!-- Header with LARGER Left and Right Images -->
     <div class="header-section">
         <img src="images/devop.jpeg" alt="Logo Left" class="logo-img">
         
@@ -93,7 +102,7 @@
 
     <!-- Server Details -->
     <div class="ip-box">
-        <h3><i style="color: #004a99;">&#9094;</i> Server Side Details</h3>
+        <h3><i style="color: #004a99;">⎆</i> Server Side Details</h3>
         <% 
             try {
                 InetAddress inetAddress = InetAddress.getLocalHost();
@@ -107,7 +116,7 @@
 
     <!-- Client Details -->
     <div class="ip-box">
-        <h3><i style="color: #004a99;">&#128187;</i> Client Side Details</h3>
+        <h3><i style="color: #004a99;">💻</i> Client Side Details</h3>
         <% 
             out.print("<strong>Your IP:</strong> " + request.getRemoteAddr() + "<br>");
             out.print("<strong>Your Host:</strong> " + request.getRemoteHost());
