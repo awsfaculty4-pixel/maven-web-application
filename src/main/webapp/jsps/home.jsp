@@ -81,7 +81,7 @@
 <div class="container">
     <!-- Header with Left and Right Images -->
     <div class="header-section">
-        <img src="images/devops.jpeg" alt="Logo Left" class="logo-img">
+        <img src="images/devop.jpeg" alt="Logo Left" class="logo-img">
         
         <div class="header-text">
             <h1>DevOps on AWS</h1>
