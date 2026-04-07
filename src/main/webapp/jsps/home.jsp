@@ -81,14 +81,14 @@
 <div class="container">
     <!-- Header with Left and Right Images -->
     <div class="header-section">
-        <img src="images/mithunlogo.jpg" alt="Logo Left" class="logo-img">
+        <img src="images/devops.jpeg" alt="Logo Left" class="logo-img">
         
         <div class="header-text">
             <h1>DevOps on AWS</h1>
             <p>Jenkins Web Application Scenarios</p>
         </div>
 
-        <img src="images/mithunlogo.jpg" alt="Logo Right" class="logo-img">
+        <img src="images/rahul.jpeg" alt="Logo Right" class="logo-img">
     </div>
 
     <!-- Server Details -->
