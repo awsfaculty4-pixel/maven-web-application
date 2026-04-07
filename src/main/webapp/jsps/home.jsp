@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>S2 Software Training Centre - Home</title>
+    <title>Devops_guruji - Home</title>
     
     <style>
         body {
@@ -83,9 +83,9 @@
         <div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
             <img src="images/mithunlogo.jpg" alt="Logo" width="100">
             <div style="text-align: left;">
-                <strong>S2 Software Training Centre</strong><br>
+                <strong>Devops_guruji</strong><br>
                 Pune, Above ICICI Bank, Bangalore<br>
-                Ph: +91-9309430036 | <a href="mailto:s2@gmail.com">s2@gmail.com</a>
+                Ph: +91-9309430036 | <a href="mailto:rahultanaji24@gmail.com">rahultanaji24@gmail.co</a>
             </div>
         </div>
         <hr>
