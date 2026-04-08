@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: my-app-container
-          image: your-docker-username/my-app:latest   # 👈 यहाँ अपनी image डालो
+          image: my-app:latest  
           ports:
-            - containerPort: 8080
+            - containerPort: 8081
