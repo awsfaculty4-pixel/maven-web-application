@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: my-app-container
-          image: awsfaculty4/my-app  
+          image: awsfaculty4/my-app:latest  
           ports:
             - containerPort: 8081
